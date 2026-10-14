@@ -1,0 +1,1 @@
+export default function sitemap(){const domain=process.env.SITE_URL;if(!domain)return [];return ['/','/about','/programs','/education','/privacy'].map(path=>({url:domain.replace(/\/$/,'')+path,changeFrequency:'monthly' as const,priority:path==='/'?1:.7}));}
